@@ -1,6 +1,5 @@
 const express = require("express");
 const port = process.env.PORT || 3000;
-// require("dotenv").config();
 const issuesRoutes = require("./routes/issues");
 const { initializeRedis } = require("./redis");
 
