@@ -1,7 +1,7 @@
 const axios = require("axios");
 const Redis = require("ioredis");
 const JSONCache = require("redis-json");
-
+require("dotenv").config();
 const redis = new Redis();
 const jsonCache = new JSONCache(redis, { prefix: "cache" });
 
@@ -15,7 +15,7 @@ const initializeRedis = async () => {
       "https://api.github.com/repos/rails/rails/issues",
       {
         headers: {
-          Authorization: "token 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",
+          Authorization: process.env.TOKEN,
         },
       }
     );
@@ -32,7 +32,6 @@ const initializeRedis = async () => {
         user,
         comments: commentCount,
       } = issue;
-      console.log(number);
       const filteredIssue = {
         url,
         title,
