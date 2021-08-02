@@ -1,0 +1,21 @@
+{
+  "name": "kazoo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "ioredis": "^4.27.7",
+    "nanoid": "^3.1.23",
+    "redis": "^3.1.2",
+    "redis-json": "^6.0.1"
+  }
+}
